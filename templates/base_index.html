@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <!-->
+ <link rel="stylesheet" type="text/css" href="base.css"> 
+ <-->
+ <style>
+    p {text-align: center;}
+    h1 {color:blue; text-align: center;}
+    .center{text-align: center;}
+  </style>
+  
+</head>
+
+    <body>
+    <div class="center"> 
+        <img src="{{url_for('static', filename = 'img/weather.jpg')}}"   style="width:304px; height:228px;">
+    </div>
+      <h1>天气查询</h1>
+      <div style="width:100%; text-align:center">
+      <form  action="/user">
+          城市：
+          <input type="text" name="city"  >
+          <input type="submit" name="action" value="查询">
+          <input type="submit" name="action" value="帮助">
+          <input type="submit" name="action" value="历史">
+      </form>
+        {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>
+
+

@@ -1,0 +1,8 @@
+{% extends "base_index.html" %}
+{% block content %}
+<p>
+        {% for info in weather_history %}
+             {{info}}<br>
+         {% endfor %}
+</p>
+{% endblock %}
